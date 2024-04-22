@@ -50,4 +50,11 @@ public class EmployeeServiceImpl implements IEmployeeService {
         employeeRepository.deleteById(id);
         return true;
     }
+
+    @Override
+    public Boolean updateEmployeeById(Long id,EmployeeDto emp) {
+        Employee updatedEmployee = EmployeeMapper.mapToEmployee(emp);
+        employeeRepository.save(updatedEmployee);
+        return true;
+    }
 }
