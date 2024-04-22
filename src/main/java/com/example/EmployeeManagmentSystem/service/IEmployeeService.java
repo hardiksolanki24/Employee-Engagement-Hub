@@ -12,4 +12,5 @@ public interface IEmployeeService {
     EmployeeDto getEmployeeById(Long id);
     List<Employee> getAllEmployees();
     Boolean removeEmployeeById(Long id);
+    Boolean updateEmployeeById(Long id,EmployeeDto emp);
 }

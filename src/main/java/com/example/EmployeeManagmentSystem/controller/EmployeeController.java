@@ -43,5 +43,11 @@ public class EmployeeController {
         return new ResponseEntity<>(isDeleted,HttpStatus.OK);
     }
 
+    @PutMapping("/updateEmployeeById/{id}")
+    public ResponseEntity<Boolean> updateEmployeeById(Long id,@RequestBody EmployeeDto UpdatedemployeeDto){
+        Boolean isUpdated = employeeService.updateEmployeeById(id,UpdatedemployeeDto);
+        return new ResponseEntity<>(isUpdated,HttpStatus.OK);
+    }
+
 }
 
